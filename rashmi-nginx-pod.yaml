@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rashmi-pod-nginx
+  labels:
+    app: rashmi
+spec:
+  containers:
+  - name: rashmi-nginx-container
+    image: rashmi-pod-nginx:latest
+    ports:
+    - containerPort: 80
