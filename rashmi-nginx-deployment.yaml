@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rashmi-pod-nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rashmi-pod-nginx
+  template:
+    metadata:
+      labels:
+        app: rashmi-pod-nginx
+    spec:
+      containers:
+      - name: rashmi-pod-nginx-container
+        image: rashmi-pod-nginx
+        ports:
+        - containerPort: 80
